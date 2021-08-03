@@ -7,12 +7,12 @@ namespace Generics
 public class FindMax
     {
         /// <summary>
-        /// Display maximum number 
+        /// Display maximum float number 
         /// </summary>
         /// <param name="firstNumber"></param>
         /// <param name="secondNumber"></param>
         /// <param name="thirdNumber"></param>
-        public int MaximumIntegerNumber(int firstNumber, int secondNumber, int thirdNumber)
+        public double MaximumFloatNumber(double firstNumber, double secondNumber, double thirdNumber)
         {
             if (firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) > 0)
                 return firstNumber;

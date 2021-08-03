@@ -7,7 +7,7 @@ namespace Generics
         static void Main(string[] args)
         {
             FindMax findMax = new FindMax();
-            findMax.MaximumIntegerNumber(29, 40, 70);
+            Console.WriteLine("Maximum number is:"+findMax.MaximumFloatNumber(29.34, 40.34, 70.54));
         }
     }
 }

@@ -13,8 +13,8 @@ namespace GenericTest
         [TestMethod]
         public void GivenMaxNumFirstPostion_WhenFindMaxNum_shouldReturnsMaxFirst()
         {
-            int firstMax = findMax.MaximumIntegerNumber(22, 1, 3);
-            Assert.AreEqual(22, firstMax);
+            double firstMax = findMax.MaximumFloatNumber(22.23, 12.2, 3.2);
+            Assert.AreEqual(22.23, firstMax);
      
         }
         /// <summery>
@@ -23,8 +23,8 @@ namespace GenericTest
         [TestMethod]
         public void GivenMaxNumSecondPosition_WhenFindNum_ShouldReturnsMaxSecond()
         {
-            int seconMax = findMax.MaximumIntegerNumber(20, 50, 10);
-            Assert.AreEqual(50, seconMax);
+            double seconMax = findMax.MaximumFloatNumber(20.12, 50.32, 10.54);
+            Assert.AreEqual(50.32, seconMax);
         }
         /// <summery>
         /// Test case 1.3
@@ -32,8 +32,8 @@ namespace GenericTest
         [TestMethod]
         public void GivenMaxNumThirdPosition_WhenFindNum_ShouldReturnMaxThird()
         {
-            int thirdMax = findMax.MaximumIntegerNumber(1, 2, 3);
-            Assert.AreEqual(3,thirdMax);
+            double thirdMax = findMax.MaximumFloatNumber(11.3, 22.32, 35.34);
+            Assert.AreEqual(35.34,thirdMax);
         }
     }
 }
