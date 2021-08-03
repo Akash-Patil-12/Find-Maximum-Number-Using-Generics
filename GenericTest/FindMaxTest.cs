@@ -10,32 +10,35 @@ namespace GenericTest
         /// Test case 1.1
         /// <summery>
         [TestMethod]
-        public void GivenMaxStringFirstPostion_WhenFindMaxString_shouldReturnsMaxFirst()
+        public void GivenMaxStringPostion_WhenFindMaxString_shouldReturnsMax()
         {
-            FindMax<string> findMaxString = new FindMax<string>("Apple", "Peach", "Banana");
-            string firstMax = findMaxString.MaximumValue();
-            Assert.AreEqual("Peach", firstMax);
+            string[] stringArray = { "Apple", "Peach", "Banana" };
+            FindMax<string> findMaxString = new FindMax<string>(stringArray);
+            string stringMax = findMaxString.MaximumValue();
+            Assert.AreEqual("Peach", stringMax);
      
         }
         /// <summery>
         /// Test case 1.2
         /// <summery>
         [TestMethod]
-        public void GivenMaxIntSecondPosition_WhenFindInteger_ShouldReturnsMaxSecond()
+        public void GivenMaxIntPosition_WhenFindInteger_ShouldReturnsMax()
         {
-            FindMax<int> findMaxInteger = new FindMax<int>(12, 33, 23);
-            int seconMax = findMaxInteger.MaximumValue();
-            Assert.AreEqual(33, seconMax);
+            int[] intArray = { 20, 30, 50 };
+            FindMax<int> findMaxInteger = new FindMax<int>(intArray);
+            int intMax = findMaxInteger.MaximumValue();
+            Assert.AreEqual(50, intMax);
         }
         /// <summery>
         /// Test case 1.3
         /// <summery>
         [TestMethod]
-        public void GivenMaxDoubleThirdPosition_WhenFindDouble_ShouldReturnMaxThird()
+        public void GivenMaxDoublePosition_WhenFindDouble_ShouldReturnMax()
         {
-            FindMax<double> findMaxDouble = new FindMax<double>(23.23, 44.12, 70.34);
-            double thirdMax = findMaxDouble.MaximumValue();
-            Assert.AreEqual(70.34, thirdMax);
+            double[] doubleArray = { 30.12, 40.23, 50.12 };
+            FindMax<double> findMaxDouble = new FindMax<double>(doubleArray);
+            double DoubleMax = findMaxDouble.MaximumValue();
+            Assert.AreEqual(50.12, DoubleMax);
         }
     }
 }

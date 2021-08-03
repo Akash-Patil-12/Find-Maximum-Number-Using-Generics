@@ -6,26 +6,34 @@ namespace Generics
 {
    public class FindMax<T> where T : IComparable
     {
+        public T[] values;
         public T firstValue, secondValue, thirdValue;
-        public FindMax(T firstValue, T secondValue, T thirdValue)
+        public FindMax(T[] values)
         {
-            this.firstValue = firstValue;
-            this.secondValue = secondValue;
-            this.thirdValue = thirdValue;
+            this.values = values;
         }
         /// <summary>
-        /// Display maximum Value of given type 
+        /// Sort given array and return maximum value
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns></returns>
+        public T SortArray(T[] array)
+        {
+            Array.Sort(array);
+            foreach(T item in array)
+            {
+                Console.WriteLine(item);
+            }
+            return array[array.Length-1];
+        }
+        /// <summary>
+        /// Return maximum Value of given type 
         /// </summary>
         /// <returns></returns>
         public T MaximumValue()
         {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
-                return firstValue;
-            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
-                return secondValue;
-            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
-                return thirdValue;
-            return (default(T));
+            T value =SortArray(values);
+            return value;
         }
     }
 }
