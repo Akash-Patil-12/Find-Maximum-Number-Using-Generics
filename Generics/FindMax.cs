@@ -7,20 +7,21 @@ namespace Generics
 public class FindMax
     {
         /// <summary>
-        /// Display maximum float number 
+        /// Display maximum string
         /// </summary>
-        /// <param name="firstNumber"></param>
-        /// <param name="secondNumber"></param>
-        /// <param name="thirdNumber"></param>
-        public double MaximumFloatNumber(double firstNumber, double secondNumber, double thirdNumber)
+        /// <param name="firstString"></param>
+        /// <param name="secondString"></param>
+        /// <param name="thirdString"></param>
+        /// <returns></returns>
+        public string MaximumString(string firstString, string secondString, string thirdString)
         {
-            if (firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) > 0)
-                return firstNumber;
-            if (secondNumber.CompareTo(firstNumber) > 0 && secondNumber.CompareTo(thirdNumber) > 0)
-                return secondNumber;
-            if (thirdNumber.CompareTo(firstNumber) > 0 && thirdNumber.CompareTo(secondNumber) > 0)
-                return thirdNumber;
-            return 0;
+            if (firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) > 0)
+                return firstString;
+            if (secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) > 0)
+                return secondString;
+            if (thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) > 0)
+                return thirdString;
+            return "";
         }
     }
 }
