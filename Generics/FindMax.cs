@@ -4,24 +4,23 @@ using System.Text;
 
 namespace Generics
 {
-public class FindMax
+    public class FindMax
     {
         /// <summary>
-        /// Display maximum string
+        /// Display maximum Value of given type  
         /// </summary>
-        /// <param name="firstString"></param>
-        /// <param name="secondString"></param>
-        /// <param name="thirdString"></param>
-        /// <returns></returns>
-        public string MaximumString(string firstString, string secondString, string thirdString)
+        /// <param name="firstNumber"></param>
+        /// <param name="secondNumber"></param>
+        /// <param name="thirdNumber"></param>
+        public T MaximumValue<T>(T firstValue, T secondValue, T thirdValue) where T : IComparable
         {
-            if (firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) > 0)
-                return firstString;
-            if (secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) > 0)
-                return secondString;
-            if (thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) > 0)
-                return thirdString;
-            return "";
+            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
+                return firstValue;
+            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+                return secondValue;
+            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
+                return thirdValue;
+            return (default(T));
         }
     }
 }

@@ -13,7 +13,7 @@ namespace GenericTest
         [TestMethod]
         public void GivenMaxStringFirstPostion_WhenFindMaxString_shouldReturnsMaxFirst()
         {
-            string firstMax = findMax.MaximumString("Peach","Apple","Banana");
+            string firstMax = findMax.MaximumValue("Peach","Apple","Banana");
             Assert.AreEqual("Peach", firstMax);
      
         }
@@ -23,8 +23,8 @@ namespace GenericTest
         [TestMethod]
         public void GivenMaxStringSecondPosition_WhenFindString_ShouldReturnsMaxSecond()
         {
-            string seconMax = findMax.MaximumString("Apple", "Peach","Banana");
-            Assert.AreEqual("Peach", seconMax);
+            int seconMax = findMax.MaximumValue(12,33,23);
+            Assert.AreEqual(33, seconMax);
         }
         /// <summery>
         /// Test case 1.3
@@ -32,8 +32,8 @@ namespace GenericTest
         [TestMethod]
         public void GivenMaxStringThirdPosition_WhenFindString_ShouldReturnMaxThird()
         {
-            string thirdMax = findMax.MaximumString("Apple","Banana","Peach");
-            Assert.AreEqual("Peach",thirdMax);
+            double thirdMax = findMax.MaximumValue(23.23,44.12,70.34);
+            Assert.AreEqual(70.34,thirdMax);
         }
     }
 }
