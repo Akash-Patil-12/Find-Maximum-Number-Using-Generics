@@ -20,10 +20,6 @@ namespace Generics
         public T SortArray(T[] array)
         {
             Array.Sort(array);
-            foreach(T item in array)
-            {
-                Console.WriteLine(item);
-            }
             return array[array.Length-1];
         }
         /// <summary>
@@ -34,6 +30,14 @@ namespace Generics
         {
             T value =SortArray(values);
             return value;
+        }
+        /// <summary>
+        /// Display maximum value of given type
+        /// </summary>
+        public void PrintMaxValue()
+        {
+            T maxValue = MaximumValue();
+            Console.WriteLine("Maximum value is :" + maxValue);
         }
     }
 }
