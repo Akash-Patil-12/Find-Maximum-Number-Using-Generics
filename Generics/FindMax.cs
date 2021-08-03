@@ -4,15 +4,20 @@ using System.Text;
 
 namespace Generics
 {
-    public class FindMax
+   public class FindMax<T> where T : IComparable
     {
+        public T firstValue, secondValue, thirdValue;
+        public FindMax(T firstValue, T secondValue, T thirdValue)
+        {
+            this.firstValue = firstValue;
+            this.secondValue = secondValue;
+            this.thirdValue = thirdValue;
+        }
         /// <summary>
-        /// Display maximum Value of given type  
+        /// Display maximum Value of given type 
         /// </summary>
-        /// <param name="firstNumber"></param>
-        /// <param name="secondNumber"></param>
-        /// <param name="thirdNumber"></param>
-        public T MaximumValue<T>(T firstValue, T secondValue, T thirdValue) where T : IComparable
+        /// <returns></returns>
+        public T MaximumValue()
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
                 return firstValue;
